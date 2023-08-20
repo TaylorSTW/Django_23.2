@@ -1,0 +1,33 @@
+{% load my_tags %}
+<div class="col-lg-auto mx-lg-5" style="width: 20vw;">
+    <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+            <h4 class="my-0 fw-normal"> {{ object.name }} </h4>
+
+        </div>
+        <div class="card-body">
+            <img src="{{object.photo|mediapath}}" class="card-img-top" alt="No image" style="width: 10vw ;height: 10vw">
+            <h1 class="card-title pricing-card-title">$ {{ object.price }}</h1>
+            <h5 class="card-text"> {{ object.category }}</h5>
+            <p class="d-inline-block text-truncate text-wrap"
+                  style="max-height: 7ch; max-width: 25ch;"> {{ object.description }}</p>
+            <br>
+            <div class="btn-group btn-group-sm">
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary">
+                    Купить
+                </button>
+                <a type="button" href="{% url "catalog:product_view" object.pk %}" class="btn btn-lg btn-outline-secondary">Подробнее</a>
+                {% if user.is_authenticated %}
+                <a type="button" href="{% url "catalog:product_update" object.pk %}" class="btn btn-lg btn-outline-secondary">Изменить</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="card-footer">
+            {% for version in version_list %}
+                {% if version.product == object and version.is_active %}
+                    {{ version }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

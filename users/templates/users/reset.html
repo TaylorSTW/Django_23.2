@@ -1,0 +1,31 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+    <div class="row align-items-center justify-content-center"
+         style="height: 50vh">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">Восстановление пароля</div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <label for="email" class="form-label">Почта</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text bg-body-secondary">@</span>
+                            <input type="email" class="form-control"
+                                   name="email" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Введите почту.
+                            </div>
+                        </div>
+                        <button
+{#                                href="{% url 'users:gen_password' %}" #}
+                                type="submit"
+                                class="btn btn-outline-primary mt-3">
+                            Восстановить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

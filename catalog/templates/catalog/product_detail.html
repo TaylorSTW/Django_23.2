@@ -1,0 +1,39 @@
+{% extends 'catalog/base.html' %}
+{% block title %}Product Detail{% endblock title %}
+{{% block content %}
+
+    <div class="row">
+
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title"> Product Information</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <th scope="row">Имя</th>
+                            <td>{{ object.name }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Описание</th>
+                            <td>{{ object.description }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Категория</th>
+                            <td>{{ object.category }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Цена</th>
+                            <td>{{ object.price }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-footer">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

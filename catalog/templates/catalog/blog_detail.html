@@ -1,0 +1,36 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+    <div class="col-12">
+        <div class="row">
+
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title"> Blog "{{ object.title }}"
+                            ({{ object.slug }})</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            {{ object.content }}
+                        </p>
+
+                    </div>
+                    <div class="card-footer">
+                        Views: {{ object.views_count }}<br>
+                        Date
+                        Created: {{ object.date_created | date:"d M Y" }}<br>
+                        {% if object.is_published %}
+                            <div class="alert alert-success float-end" role="alert">
+                                Published!
+                            </div>
+                        {% else %}
+                            <div class="alert alert-warning float-end" role="alert">
+                                Not Published!
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

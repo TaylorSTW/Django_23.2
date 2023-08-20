@@ -1,0 +1,19 @@
+{% extends 'catalog/base.html' %}
+{% block title %} Categories {% endblock title %}
+{% block tab_cat %} class="nav-link active"
+    aria-current="page" {% endblock tab_cat %}
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+            {% for object in object_list %}
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <p class="card-text">{{ object.name }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

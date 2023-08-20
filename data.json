@@ -1,0 +1,186 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 9,
+    "fields": {
+      "name": "Toys",
+      "description": "Products for kids"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 10,
+    "fields": {
+      "name": "Clothes",
+      "description": "Products to wear"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 11,
+    "fields": {
+      "name": "Food & Beverages",
+      "description": "Products to consume"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 12,
+    "fields": {
+      "name": "Electronics",
+      "description": "Electronic equipment for household"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Cola",
+      "description": "Cola is a carbonated soft drink flavored with vanilla, cinnamon, citrus oils, and other flavorings. Cola became popular worldwide after the American pharmacist John Stith Pemberton invented Coca-Cola, a trademarked brand, in 1886, which was imitated by other manufacturers. Most colas originally contained caffeine from the kola nut, leading to the drink's name, though other sources have since been used. The Pemberton cola drink also contained a coca plant extract.",
+      "photo": "shop/download_4.jpeg",
+      "category": 11,
+      "price": 4,
+      "date_created": "2023-06-23T04:08:43Z",
+      "date_modified": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Dishwasher",
+      "description": "A dishwasher is a machine that is used to clean dishware, cookware, and cutlery automatically. Unlike manual dishwashing, which relies heavily on physical scrubbing to remove soiling, the mechanical dishwasher cleans by spraying hot water, typically between 45 and 75 °C (110 and 170 °F), at the dishes, with lower temperatures of water used for delicate items.",
+      "photo": "shop/download_3.jpeg",
+      "category": 12,
+      "price": 400,
+      "date_created": "2023-06-23T04:09:03Z",
+      "date_modified": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Clown",
+      "description": "The comedy that clowns perform is usually in the role of a fool whose everyday actions and tasks become extraordinary—and for whom the ridiculous, for a short while, becomes ordinary. This style of comedy has a long history in many countries and cultures across the world. Some writers have argued that due to the widespread use of such comedy and its long history it is a need that is part of the human condition.[",
+      "photo": "shop/download_2.jpeg",
+      "category": 9,
+      "price": 50,
+      "date_created": "2023-06-23T04:09:18Z",
+      "date_modified": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Cap",
+      "description": "A cap is a flat headgear, usually with a visor. Caps have crowns that fit very close to the head. They made their first appearance as early as 3200 BC. The origin of the word \"cap\" comes from the Old French word \"chapeau\" which means \"head covering\". Over time, the word has evolved and changed its meaning, but it still retains its association with headwear. Caps typically have a visor, or no brim at all. They are popular in casual and informal settings, and are seen in sports and fashion. They are typically designed for warmth, and often incorporate a visor to block sunlight from the eyes. They come in many shapes, sizes, and are of different brands. Baseball caps are one of the most common types of cap.",
+      "photo": "shop/download_1.jpeg",
+      "category": 10,
+      "price": 15,
+      "date_created": "2023-06-23T04:10:05Z",
+      "date_modified": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "name": "MilkyWay",
+      "description": "Description of product",
+      "photo": "shop/milky-way-161-550x550.jpg",
+      "category": 11,
+      "price": 5,
+      "date_created": "2023-01-01T00:00:00Z",
+      "date_modified": null
+    }
+  },
+  {
+    "model": "catalog.contact",
+    "pk": 1,
+    "fields": {
+      "name": "Marco",
+      "email": "herewego@mail.com",
+      "message": "First user"
+    }
+  },
+  {
+    "model": "catalog.contact",
+    "pk": 2,
+    "fields": {
+      "name": "Anita",
+      "email": "an_040124@gmail.com",
+      "message": "Hi, I'm just registered"
+    }
+  },
+  {
+    "model": "catalog.blog",
+    "pk": 1,
+    "fields": {
+      "title": "Blog 1",
+      "slug": "blog-1",
+      "content": "First blog of this century",
+      "preview": "",
+      "date_created": "2001-01-01T00:00:00Z",
+      "is_published": true,
+      "views_count": 16
+    }
+  },
+  {
+    "model": "catalog.blog",
+    "pk": 3,
+    "fields": {
+      "title": "На стороне тьмы",
+      "slug": "na-storone-tmyi",
+      "content": "Тысячелетия назад его выковал злобный чародей Саурон, хозяин Тёмного царства, выковал, потом утратил и сейчас жаждет получить обратно. А это обернётся гибелью мира, ибо, овладев Кольцом, Саурон станет всесилен.",
+      "preview": "",
+      "date_created": "2005-05-05T00:00:00Z",
+      "is_published": false,
+      "views_count": 8
+    }
+  },
+  {
+    "model": "catalog.blog",
+    "pk": 4,
+    "fields": {
+      "title": "Блог что хорош",
+      "slug": "blog-chto-horosh",
+      "content": "Привычка регулярно записывать идеи в блоге приносит много бонусов: вы структурируете мысли, тренируете самодисциплину, учитесь общаться с читателями и справляться с критикой.",
+      "preview": "",
+      "date_created": "2020-03-05T00:00:00Z",
+      "is_published": true,
+      "views_count": 0
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 1,
+    "fields": {
+      "product": 6,
+      "number": 1,
+      "name": "Adding more milk",
+      "is_active": false
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 2,
+    "fields": {
+      "product": 6,
+      "number": 2,
+      "name": "Adding even more milk",
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 3,
+    "fields": {
+      "product": 3,
+      "number": 1,
+      "name": "Change costume",
+      "is_active": true
+    }
+  }
+]

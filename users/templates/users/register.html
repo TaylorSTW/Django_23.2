@@ -1,0 +1,18 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+    <div class="row align-items-center justify-content-center" style="height: 50vh">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">Регистрация пользователя</div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-success">Регистрация
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "catalog/base.html" %}
+{%block title%} Lesson 20.1 contacts {%endblock title%}
+{%block tab_contacts%} class="nav-link active" aria-current="page" {%endblock tab_contacts%}
+{%block content%}
+<h1 class="d-flex display-5 fw-normal mb-3 justify-content-center align-items-end" style="height: 15vh;">Контакты</h1>
+<div class="row g-5 justify-content-center mt-4">
+	<div class="col-lg-5 order-last mx-5">
+		<h3>Наши контакты</h3>
+		
+		<!-- Get contacts from database -->
+		<ul>
+			{% for i in contacts %}
+				<li>{{i}}</li>
+			{% endfor %}
+		</ul>	
+	
+		<p>While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.</p>
+	</div>
+	<div class="col-lg-4 mx-5">
+		<form class="card p-3" method="post">
+			{%  csrf_token %}
+			<div class="col mb-3">
+				<label for="Name" class="form-label">Имя</label>
+				<input type="text" class="form-control" name="name" placeholder="" value="" required="">
+				<div class="invalid-feedback">
+					Введите имя.
+					</div>
+			</div>
+			<div class="col mb-3">
+				<label for="email" class="form-label">Почта</label>
+				<div class="input-group has-validation">
+				<span class="input-group-text bg-body-secondary">@</span>
+				<input type="email" class="form-control" name="email" placeholder="" required="">
+				<div class="invalid-feedback">
+					Введите почту.
+				</div>
+				</div>
+			</div>
+			<div class="col mb-3">
+				<label for="message" class="form-label">Сообщение</label>
+				<textarea class="form-control" placeholder="" name="message" style="height: 70px"></textarea>
+				<div class="invalid-feedback">
+					Введите сообщение.
+					</div>
+			</div>
+			<button class="btn btn-primary me-auto" type="sumbit">Отправить</button>
+		</form>
+	</div>
+	
+</div>
+{%endblock content%}
+
